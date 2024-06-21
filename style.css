@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: "Montserrat";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 145px;
+    gap: 50px;
+    padding: 0 125px;
+    position: fixed;
+    z-index: 9999;
+}
+#nav img{
+    height: 75px;
+}
+#nav h5{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.39);
+    height: 100%;
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 7.5vw;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    top:-6px;
+    left: -6px;
+    color: black;
+    z-index: -1;
+    -webkit-text-stroke: 1px #95C11E;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 15px;
+    width: 40%;
+    font-weight: 400;
+}
+#cursor{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 999900009;
+    border-radius: 50%;
+    background-color:#95C11E;
+}
+#cursor-blur{
+    width: 300px;
+    height: 300px;
+    filter: blur(30px);
+   
+    position: fixed;
+    opacity: 0.6;
+    border-radius: 50%;
+    background-color:#95C11E;
+}
+#cursor2{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 999900009;
+    border-radius: 50%;
+    background-color:#95C11E;
+}
+#cursor-blur2{
+    width: 300px;
+    height: 300px;
+    filter: blur(30px);
+    opacity: 0.6;
+    position: fixed;
+   
+    border-radius: 50%;
+    background-color:#95C11E;
+}
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+#scroller{
+   
+    white-space: nowrap;
+    display: flex;
+    margin-top: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroller-in-1{
+    display: flex;
+    white-space: nowrap;
+    gap: 20px;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#scroller-in-2{
+    display: flex;
+    white-space: nowrap;
+    gap: 20px;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller h4{
+    font-size: 100px;
+    -webkit-text-stroke: 2px #95C11E;
+    color: black;
+    font-family: gilroy;
+}
+@keyframes scroll {
+    from{
+        transform :translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+#aboutus{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    padding: 50px 50px;
+    justify-content: center;
+    
+}
+#aboutus img:first-child{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    margin-left: 40px;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 50%;
+}
+#about h2{
+    font-size: 60px;
+}
+.image_2{
+    width: 140px;
+    height:180px;
+   
+}
+#cards{
+    height: 60vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70px;
+    
+    
+}
+.card{
+    width: 24%;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-size: cover;
+    
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2 {
+    background-size: cover;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  #card3 {
+    background-size: cover;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  .overlay {
+    height: 100%;
+    width: 100;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+  }
+  .overlay h4 {
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  .overlay p {
+    color: #000;
+    font-size: 18px;
+  }
+  .card:hover .overlay{
+    opacity: 1;
+    
+  }
+  .card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+  }
+  #green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+  }
+  #green-div h4 {
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+  }
+  #green-div img {
+    height: 100%;
+    object-fit: cover;
+    width:14%;
+  }
+  #page3{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  #page3 p{
+    width: 45%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+  }
+  #page3 img{
+    
+    height: 60px;
+  }
+  #colon1{
+    position: absolute;
+    top:20%;
+    left:15%;
+  }
+  #colon2{
+    bottom: 30%;
+    left: 80%;
+    position: absolute;
+  }
